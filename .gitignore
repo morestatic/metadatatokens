@@ -1,0 +1,10 @@
+node_modules
+artifacts
+cache
+dist
+
+coverage
+coverage.json
+
+.solcx*
+hardhat.env.ts
