@@ -44,7 +44,7 @@ an on-chain URL. These are described below.
 ### Admin Roles
 
 Firstly there are two extra admin roles in addition to the core ERC721 roles.
-These are for Registry and Token Managers.
+These are for Registry (aka contract) and Token Managers.
 
 Registry Managers have full control of all aspects of the contract apart from
 they cannot `halt` the contract - which can only be done by the contract /
@@ -147,6 +147,7 @@ the communities there.
 - [ ] Add an explicit interface for the roles based functions, even if
       implemented in the core contract?
 - [ ] Can roles be more configurable?
+- [ ] How about multi-sig for registry admins?
 - [ ] Consider extending the ERC165 functionality for the MDRT interfaces
 - [ ] Add samples and dev guide
 - [ ] Add simple client to create, get and update the tokens
