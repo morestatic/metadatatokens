@@ -60,8 +60,11 @@ Managers, Token Managers have no ERC721 specific admin rights.
 Secondly, there's support for an additional URI property for a field
 containing a RefSpec. This field allows further metadata that describes how
 to access the token metadata (extra meta!). For example, this could be a link
-to json schema describing the metadata and/or public keys, or both for
-verification etc.
+to json schema describing the metadata and/or public keys for verification, or
+both, etc. If a refSpec is being used then the seqNum field starts to be used.
+The seqNum is updated each time the tokenURI is updated. If the refSpec is
+updated then the seqNum is included with the refSpec update event. This allows
+for a history of which refSpecs apply to which tokenURI values over time.
 
 ### Additional Contract Run States
 
@@ -138,9 +141,12 @@ the communities there.
 - [ ] Should tokenManagers be able to manage other tokenManagers? (probably not)
 - [ ] Add github CI support
 - [ ] Consider using foundary where appropriate
+- [ ] Consider adding support for upgradable contact versions
+- [ ] Should there be a feature to mark a token as 'bad' to limit abuse? (probably)
 - [ ] Review natspec documentation
 - [ ] Improve this documentation
 - [ ] Tidy and refactor tests
+- [ ] Improve use of testdata
 - [ ] Tidy up some folders (e.g. contracts/test)
 - [ ] Consider the handling of the test minting functions for the ERC721 tests
 - [ ] Add constructor based limits on the number of admins? (probably)
